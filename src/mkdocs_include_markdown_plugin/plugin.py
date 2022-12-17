@@ -16,11 +16,10 @@ except ImportError:
     def event_priority(priority: float) -> Callable[[T], T]:  # noqa: D103
         return lambda f: f
 
-if TYPE_CHECKING:
-    from mkdocs.config.defaults import MkDocsConfig
-    from mkdocs.livereload import LiveReloadServer
-    from mkdocs.structure.files import Files
-    from mkdocs.structure.pages import Page
+from mkdocs.config.defaults import MkDocsConfig
+from mkdocs.livereload import LiveReloadServer
+from mkdocs.structure.files import Files
+from mkdocs.structure.pages import Page
 
 from mkdocs_include_markdown_plugin.config import CONFIG_SCHEME
 from mkdocs_include_markdown_plugin.event import (
